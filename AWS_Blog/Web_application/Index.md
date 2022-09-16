@@ -3,4 +3,4 @@ You are a Network Administrator / Network Engineer of a company. You recieved an
 
 The current system of your company is running on Microsoft Windows Server 2022. You are searching around on the internet and found this lab that suitable your needs to research and test Windows Server on AWS.
 
-![Basic Diagram - Windows Server on AWS](images/ecommerce VN.drawio.png) 
+![alt](https://github.com/RyanNguyen1902/AWS_reStart/blob/e54f46694e695925ee06d68251366b833c6a6bb5/AWS_Blog/Web_application/images/ecommerceVN.drawio.png)
