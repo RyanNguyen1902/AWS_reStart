@@ -33,8 +33,6 @@ Use Nat gateway so that resources in private subnets can communicate with the in
 
 Use Cloud front connect to S3 and internet gateway to reduce latency and improve performance for global users
 
-Use WAF to set security rules to protect your web application
-
 Using AWS shield against attack from outside to help minimize application downtime and latency
 
 Cost estimate:
@@ -43,10 +41,9 @@ Cost estimate:
 - Elastic load balancer: 31.03 USD/ month
 - Rds: 1087.30 USD/ month/ RDS
 - Nat gateway: 32.89 USD/ month/ nat gateway
-- Waf: 50 USD/ month/ 10 Web ACLs
 - S3: 2.30 USD/ month/ 100GB
 - Cloudfront: 100 USD/ month/ 100GB
-Total cost: 2394.21 usd/ month 
+
 
 
 
