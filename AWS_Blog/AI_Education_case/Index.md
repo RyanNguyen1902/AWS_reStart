@@ -32,5 +32,8 @@ Use Simple Notification Service to notify email or SMS user or administrator
 
 Cost estimate: 
 
+![alt](https://github.com/RyanNguyen1902/AWS_reStart/blob/1dc41bf5621e19338759ce534ddb24c1f26e6895/AWS_Blog/AI_Education_case/images/Estimate.PNG)
 
+Detail:
 https://calculator.aws/#/estimate?id=9f482b792d8f8828814495feaeceece6425f17f1
+https://github.com/RyanNguyen1902/AWS_reStart/blob/main/AWS_Blog/AI_Education_case/Introduction/AWS%20Pricing%20Calculator.pdf
