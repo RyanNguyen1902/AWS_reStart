@@ -36,13 +36,6 @@ Use Cloud front connect to S3 and internet gateway to reduce latency and improve
 Using AWS shield against attack from outside to help minimize application downtime and latency
 
 Cost estimate:
-- Route 53 for 1 traffic flow: 50 USD/ month
-- Ec2: 134 USD/ month/ instance
-- Elastic load balancer: 31.03 USD/ month
-- Rds: 1087.30 USD/ month/ RDS
-- Nat gateway: 32.89 USD/ month/ nat gateway
-- S3: 2.30 USD/ month/ 100GB
-- Cloudfront: 100 USD/ month/ 100GB
 
 
 
