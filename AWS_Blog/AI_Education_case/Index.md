@@ -6,7 +6,7 @@ The current system of your company is running on Microsoft Windows Server. You a
 ### Design architecture with high availability 
 
 
-![alt]([https://github.com/RyanNguyen1902/AWS_reStart/blob/5b575381d2e783da3ebcb6b4d4d0949da67ede93/AWS_Blog/AI_Education_case/images/AI_EDUCATION%20CASE.drawio.png])
+![alt](https://github.com/RyanNguyen1902/AWS_reStart/blob/5b575381d2e783da3ebcb6b4d4d0949da67ede93/AWS_Blog/AI_Education_case/images/AI_EDUCATION%20CASE.drawio.png)
 
 Create a custom VPC with multi-AZ in one region to secure web application, we have spread all resources across 2 availability zones to provide for redundancy  
 
