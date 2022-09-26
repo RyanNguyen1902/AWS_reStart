@@ -30,4 +30,7 @@ Use Simple Storage Service for storage
 
 Use Simple Notification Service to notify email or SMS user or administrator
 
-Cost estimate:
+Cost estimate: 
+
+
+https://calculator.aws/#/estimate?id=9f482b792d8f8828814495feaeceece6425f17f1
