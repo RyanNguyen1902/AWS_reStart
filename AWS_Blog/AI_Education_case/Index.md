@@ -1,7 +1,5 @@
 ### DESIGN ARCHITECTURE FOR AI EDUCATION COMPANY
-You are a Network Administrator / Cloud Engineer of a company. You recieved an email to inform you that company want you to research about AWS and do a report for both CIO and CTO. 
-
-The current system of your company is running on Microsoft Windows Server. You are searching around on the internet and found this lab that suitable your needs to research and test Windows Server on AWS.
+You are a Network Administrator / Cloud Engineer of a company. You recieved an email to inform you that company want you to research about AWS and do a report for Customer. 
 
 ### Design architecture with high availability 
 
