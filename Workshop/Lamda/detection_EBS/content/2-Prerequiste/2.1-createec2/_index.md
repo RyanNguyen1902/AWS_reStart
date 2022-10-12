@@ -1,12 +1,12 @@
 ---
-title : "Preparing VPC and EC2"
+title : "Preparing AWS CloudFormation stack"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+Once you’ve signed up for an AWS account, you can deploy the AWS CloudFormation stack by following these steps.
 
 The architecture overview after you complete this step will be as follows:
 
