@@ -1,20 +1,27 @@
 ---
-title : "Chuẩn bị VPC và EC2"
+title : "Chuẩn bị tạo AWS CloudFormation stack"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 1 EC2 Instance Linux nằm trong public subnet,  1 EC2 Instance Windows nằm trong private subnet.
+{{% notice info %}}
+Sau khi đăng ký tài khoản AWS, bạn cần triển khai AWS CloudFormation stack bằng cách làm theo các bước sau.
+{{% /notice %}}
 
-Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:
+Để tìm hiểu về AMAZON S3 và AWS CLOUDFORMATION các bạn có thể tham khảo bài lab :
+  - [AWS CLOUDFORMATION](https://000037.awsstudygroup.com/vi/)
+  - [Bắt đầu với AMAZON S3](https://000057.awsstudygroup.com/vi/)
 
-![VPC](/images/arc-01.png)
 
-Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :
-  - [Giới thiệu về Amazon EC2](https://000004.awsstudygroup.com/vi/)
-  - [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/) 
+1. Tải xuống và lưu [AWS CloudFormation template](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-cfn.json/) vào máy tính của bạn.
+
+2. Tải xuống và lưu [anomaly-detection-lambda.zip](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-lambda.zip/) Lambda code vào máy tính của bạn.
+
+3. Sau khi bạn đã đăng nhập vào Bảng Management Console, chúng ta tạo Amazon S3 với tên bạn chọn. Bạn sẽ cần tạo S3 bucket này trong cùng khu vực mà bạn định triển khai mẫu CloudFormation. Sau khi bạn tạo bucket, hãy tải tệp **“anomaly-detection-lambda.zip”** lên bucket mới tạo. Ảnh chụp màn hình này cho thấy một Amazon S3 bucket có tên là **“ebs-anomaly-detection-bucket”** với mã Lambda nén được tải lên nó.
+
+![ConnectPrivate](/images/2.prerequisite/001-S3-Bucket.png) 
 
 
 ### Nội dung

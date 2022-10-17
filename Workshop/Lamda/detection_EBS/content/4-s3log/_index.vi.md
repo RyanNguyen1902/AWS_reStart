@@ -1,5 +1,5 @@
 ---
-title : "Quản lý session logs"
+title : "Config Cloudwatch"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false
