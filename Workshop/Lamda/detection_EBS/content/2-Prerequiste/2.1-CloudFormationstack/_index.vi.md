@@ -1,5 +1,5 @@
 ---
-title : "Chuẩn bị tạo AWS CloudFormation stack"
+title : "Chuẩn bị, tạo AWS CloudFormation stack"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
@@ -25,7 +25,7 @@ Sau khi đăng ký tài khoản AWS, bạn cần triển khai AWS CloudFormation
 
 
 ### Nội dung
-  - [Tạo VPC](2.1.1-createvpc/)
+  - [Tạo CloudFormation stack](2.1.1-CloudFormationstack/)
   - [Tạo Public subnet](2.1.2-createpublicsubnet/)
   - [Tạo Private subnet](2.1.3-createprivatesubnet/)
   - [Tạo security group](2.1.4-createsecgroup/)

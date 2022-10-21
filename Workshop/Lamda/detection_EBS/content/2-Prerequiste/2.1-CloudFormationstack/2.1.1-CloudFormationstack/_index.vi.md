@@ -1,5 +1,5 @@
 ---
-title : "Tạo VPC "
+title : "Tạo CloudFormation stack "
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false

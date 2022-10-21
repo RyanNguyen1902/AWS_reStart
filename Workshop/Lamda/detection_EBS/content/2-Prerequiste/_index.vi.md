@@ -24,7 +24,7 @@ Sau khi đăng ký tài khoản AWS, bạn cần triển khai AWS CloudFormation
 ![ConnectPrivate](/images/2.prerequisite/001-S3-Bucket.png) 
 
 ### Nội dung
-  - [Chuẩn bị VPC và EC2 Instance](2.1-createec2/)
+  - [Tạo CloudFormation stack](2.1-CloudFormationstack/)
   - [Tạo IAM Role](2.2-createiamrole/)
 
   

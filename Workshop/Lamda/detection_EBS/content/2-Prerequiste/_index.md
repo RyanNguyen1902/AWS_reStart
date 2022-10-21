@@ -7,15 +7,24 @@ pre : " <b> 2. </b> "
 ---
 
 {{% notice info %}}
-You need to create 1 Linux instance on the public subnet and 1 Window instance on the private subnet to perform this lab.
+Once you’ve signed up for an AWS account, you can deploy the AWS CloudFormation stack by following these steps.
 {{% /notice %}}
 
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+The architecture overview after you complete this step will be as follows:
 
-In order to use System Manager to manage our window instances in particular and our instances in general on AWS, we need to give permission to our instances to be able to work with System Manager. In this preparation, we will also proceed to create an IAM Role to grant permissions to instances that can work with System Manager.
+
+To learn about AMAZON S3 and AWS CLOUDFORMATION you can refer to the lab:
+  - [AWS CLOUDFORMATION](https://000037.awsstudygroup.com/)
+  - [Starting with Amazon S3](https://000057.awsstudygroup.com/)
+
+1. Download and save the [AWS CloudFormation template](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-cfn.json/) to your local computer.
+
+2. Download and save the [anomaly-detection-lambda.zip](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-lambda.zip/) Lambda code to your local computer.
+
+3. After you’ve logged into the AWS Management Console, create an Amazon S3 bucket with a name you choose. You’ll need to create this S3 bucket in the same region you intend to deploy the CloudFormation template. After you create the bucket, upload the **“anomaly-detection-lambda.zip”** file to the newly created bucket. This screenshot shows an Amazon S3 bucket named **“ebs-anomaly-detection-bucket”** with the zipped Lambda code uploaded to it.
+
+![ConnectPrivate](/images/2.prerequisite/001-S3-Bucket.png) 
 
 ### Content
-  - [Prepare VPC and EC2](2.1-createec2/)
+  - [Create CloudFormation stack](2.1-CloudFormationstack/)
   - [Create IAM Role](2.2-createiamrole/)
