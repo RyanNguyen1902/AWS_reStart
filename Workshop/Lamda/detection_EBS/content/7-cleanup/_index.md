@@ -8,25 +8,16 @@ pre = "<b>7. </b>"
 
 We will take the following steps to delete the resources we created in this exercise.
 
-#### Delete EC2 instance
+#### Delete a stack on the AWS CloudFormation console
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   + Click **Instances**.
-   + Select both **Public Linux Instance** and **Private Windows Instance** instances.
-   + Click **Instance state**.
-   + Click **Terminate instance**, then click **Terminate** to confirm.
+1. Go to [AWS CloudFormation](https://console.aws.amazon.com/cloudformation/) page
+2. In the **CloudFormation** interface, select **Stack**
+3. Select Stack to delete
+4. Select **Delete**
+5. Verify clearing stack
+6. Wait a few minutes for the stack to change state to **DELETE_COMPLETE** to be deleted successfully
 
-2. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home#/home)
-   + Click **Roles**.
-   + In the search box, enter **SSM**.
-   + Click to select **SSM-Role**.
-   + Click **Delete**, then enter the role name **SSM-Role** and click **Delete** to delete the role.
-
-![Clean](/images/6.clean/001-clean.png)
-
-3. Click **Users**.
-   + Click on user **Portfwd**.
-   + Click **Delete**, then enter the user name **Portfwd** and click **Delete** to delete the user.
+![AWS CloudFormation](/images/7.clean/001-clean.png)
 
 #### Delete S3 bucket
 
@@ -47,37 +38,18 @@ We will take the following steps to delete the resources we created in this exer
 
 3. After deleting all objects in the bucket, click **Delete**
 
-![Clean](/images/6.clean/002-clean.png)
+![Clean](/images/7.clean/003-clean.png)
 
 4. Enter the name of the S3 bucket, then click **Delete bucket** to proceed with deleting the S3 bucket.
 
-![Clean](/images/6.clean/003-clean.png)
+![Clean](/images/7.clean/004-clean.png)
 
-#### Delete VPC Endpoints
+#### Delete EC2 instance
 
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Endpoints**.
-   + Select the 4 endpoints we created for the lab including **SSM**, **SSMMESSAGES**, **EC2MESSAGES**, **S3GW**.
-   + Click **Actions**.
-   + Click **Delete VPC endpoints**.
+1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
+   + Click **Instances**.
+   + Select both **Public Linux Instance** and **Private Windows Instance** instances.
+   + Click **Instance state**.
+   + Click **Terminate instance**, then click **Terminate** to confirm.
 
-![Clean](/images/6.clean/004-clean.png)
-
-2. In the confirm box, enter **delete**.
-   + Click **Delete** to proceed with deleting endpoints.
-
-3. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.
-
-![Clean](/images/6.clean/005-clean.png)
-
-#### Delete VPC
-
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Your VPCs**.
-   + Click on **Lab VPC**.
-   + Click **Actions**.
-   + Click **Delete VPC**.
-
-2. In the confirm box, enter **delete** to confirm, click **Delete** to delete **Lab VPC** and related resources.
-
-![Clean](/images/6.clean/006-clean.png)
+   ![AWS EC2](/images/7.clean/002-cleann.png)
