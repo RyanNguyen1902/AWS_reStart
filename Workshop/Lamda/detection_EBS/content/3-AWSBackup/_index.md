@@ -18,14 +18,13 @@ After you’ve logged into the AWS Management Console, navigate to the AWS Backu
 
 + Next, select the **Backup plans** link in the left navigation pane to access the backup plan created during the deployment.
 
+![Backup-Plan](/images/3.AWSBackup/002-Backup-Plan.png) 
+
 2. Select the **AnomalyDetectionBackupPlan** link under “Backup plan name” to access detailed information.
 
-![Backup-Plan](/images/3.AWSBackup/002-Backup-Plan.png) 
+![Backup-Plan](/images/3.AWSBackup/003-Backup-Plan.png) 
 
 The default CloudFormation creates daily and monthly backup rules with 1-year retention. If this default doesn’t match your requirements, feel free to delete/add new rules as you see fit.
 
 The **Selection** resource assignment selects EBS resources matching the tag key parameter you entered during deployment. Like backup rules, if the default resource assignment doesn’t fit your needs, you can delete and assign a new one.
 
-### Content
-3.1. [Connect to EC2 Public Server](3.1-public-instance/)
-3.2. [Cconnect to EC2 Private Server](3.2-private-instance/)

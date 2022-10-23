@@ -6,28 +6,37 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-{{% notice info %}}
-Sau khi đăng ký tài khoản AWS, bạn cần triển khai AWS CloudFormation stack bằng cách làm theo các bước sau.
-{{% /notice %}}
+#### Tạo AWS CloudFormation stackk
+1. Vào [AWS Management console](https://console.aws.amazon.com/cloudformation/home)
+Tạo CloudFormation stack bằng cách vào  AWS CloudFormation dashboard. 
+![CloudFormation](/images/2.prerequisite/003-CloudFormation.png)
 
-Để tìm hiểu về AMAZON S3 và AWS CLOUDFORMATION các bạn có thể tham khảo bài lab :
-  - [AWS CLOUDFORMATION](https://000037.awsstudygroup.com/vi/)
-  - [Bắt đầu với AMAZON S3](https://000057.awsstudygroup.com/vi/)
+  + Chọn Tải lên tệp **template file** và chọn tệp **“anomaly-Discovery-cfn.json”** - tệp mà bạn đã tải xuống.
+  + Click **Next**.
 
+![CloudFormation](/images/2.prerequisite/004-CloudFormation-Create.png)
 
-1. Tải xuống và lưu [AWS CloudFormation template](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-cfn.json/) vào máy tính của bạn.
+2. Ở cửa sổ **CloudFormation stack** details, bạn sẽ được yêu cầu cung cấp bốn tham số trong quá trình triển khai:
 
-2. Tải xuống và lưu [anomaly-detection-lambda.zip](https://github.com/RyanNguyen1902/AWS_reStart/blob/d0ad7895601cc588fcf2fafd1cfc3430505e9dae/Workshop/anomaly-detection-lambda.zip/) Lambda code vào máy tính của bạn.
+![CloudFormation](/images/2.prerequisite/005-CloudFormation-Details.png)
 
-3. Sau khi bạn đã đăng nhập vào Bảng Management Console, chúng ta tạo Amazon S3 với tên bạn chọn. Bạn sẽ cần tạo S3 bucket này trong cùng khu vực mà bạn định triển khai mẫu CloudFormation. Sau khi bạn tạo bucket, hãy tải tệp **“anomaly-detection-lambda.zip”** lên bucket mới tạo. Ảnh chụp màn hình này cho thấy một Amazon S3 bucket có tên là **“ebs-anomaly-detection-bucket”** với mã Lambda nén được tải lên nó.
+  + **AnomalyDetectionEmail**: Địa chỉ email này sẽ nhận thông báo Amazon SNS và sẽ được sử dụng để định cấu hình Amazon SNS topic. Trong quá trình triển khai AWS CloudFormation, bạn sẽ nhận được email tại địa chỉ này, với chủ đề **“AWS Notification – Subscription Confirmation”**, yêu cầu bạn xác nhận đăng ký của mình bằng cách nhấp vào liên kết trong email.
+  ![AWSSNS](/images/2.prerequisite/007-AWSSNS.png)
 
-![ConnectPrivate](/images/2.prerequisite/001-S3-Bucket.png) 
+  + **AnomalyDetectionTagKey**: Tag key này sẽ xác định Amazon EBS volumes cần đưa vào để phát hiện sự bất thường. Bất kỳ EBS volume nào có Tag key này được xác định sẽ được chọn bởi Kế hoạch sao lưu AWS được tạo trong quá trình thiết lập AWS CloudFormation.
 
+  + **BackupAnomalyDetectionS3Bucket**: Đây là tên của S3 bucket mà bạn đã tạo ở trước đó. Lưu ý rằng, S3 bucket này cần ở cùng khu vực mà bạn hiện đang triển khai mẫu CloudFormation này.
 
-### Nội dung
-  - [Tạo CloudFormation stack](2.1.1-CloudFormationstack/)
-  - [Tạo Public subnet](2.1.2-createpublicsubnet/)
-  - [Tạo Private subnet](2.1.3-createprivatesubnet/)
-  - [Tạo security group](2.1.4-createsecgroup/)
-  - [Tạo máy chủ Linux public](2.1.5-createec2linux/)
-  - [Tạo máy chủ Windows private](2.1.6-createec2windows/)
+  + **BackupAnomalyDetectionS3Code**: Đây là tên một ZIP file bạn đã upload lên S3 bucket và trong đó chứa Lambda code.
+
+  + Nhấp vào nút **Next button** và cả ở trang tiếp theo sau (cấu hình các tùy chọn stack).
+
+3. Cuộn xuống cuối màn hình xem lại, chọn kiểm tra ***I acknowledge that AWS CloudFormation might create IAM resources**. 
+  + Chọn nút **Create stack** để tạo CloudFormation stack.
+
+![CloudFormation](/images/2.prerequisite/006-CloudFormation-Finish.png)
+
+#### Configuration
+  Sau khi bạn khởi chạy xong stack, mọi thứ sẽ được triển khai vào tài khoản AWS của bạn và sau đó bạn có thể sẵn sàng kiểm tra tài nguyên đã tạo.
+
+![CloudFormation-Completed](/images/2.prerequisite/008-CloudFormation-Completed.png)

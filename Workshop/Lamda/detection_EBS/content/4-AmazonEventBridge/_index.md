@@ -21,13 +21,3 @@ Select the rule to see the **Event pattern** defined for it. This event pattern 
 
 ![EventRuleTarget](/images/4.AmazonEventBridge/003-EventBridge-Rule-Target.png)
 
-
-
-
-
-### Content:
-
-   - [Update IAM Role](./4.1-updateiamrole/)
-   - [Create **S3 Bucket**](./4.2-creates3bucket/)
-   - [Create S3 Gateway endpoint](./4.3-creategwes3)
-   - [Configure **Session logs**](./4.4-configsessionlogs/)

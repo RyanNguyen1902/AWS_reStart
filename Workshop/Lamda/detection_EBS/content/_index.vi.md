@@ -18,8 +18,9 @@ Bảo vệ dữ liệu của bạn khỏi các cuộc tấn công mạng và ran
 
  1. [Giới thiệu](1-introduce/)
  2. [Các bước chuẩn bị](2-Prerequiste/)
- 3. [Triển khai AWS CloudFormation](3-Accessibilitytoinstance/)
- 4. [Config Cloudwatch](4-s3log/)
- 5. [Port Forwarding](5-Portfwd/)
- 6. [Dọn dẹp tài nguyên](6-cleanup/)
+ 3. [AWS Backup](3-AWSBackup/)
+ 4. [Amazon Event Bridge](4-AmazonEventBridge/)
+ 5. [Lambda](5-Lambda/)
+ 6. [Kiểm tra kết quả](6-WalkthroughResult/)
+ 7. [Clean up resources](7-cleanup/)
 

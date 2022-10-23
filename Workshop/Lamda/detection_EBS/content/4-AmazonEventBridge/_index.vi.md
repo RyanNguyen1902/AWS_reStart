@@ -1,5 +1,5 @@
 ---
-title : "Config Cloudwatch"
+title : "Amazon EventBridge"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false
@@ -7,17 +7,17 @@ pre : " <b> 4. </b> "
 ---
 
 
-Với Session Manager chúng ta có thể xem được lịch sử các kết nối tới các instance thông qua **Session history**. Tuy nhiên chúng ta chưa xem được chi tiết các câu lệnh được sử dụng.
+1. Như được tham chiếu trong ảnh chụp screenshot, ta truy cập trang tổng quan Amazon EventBridge và chọn liên kết **Rules** trong ngăn điều hướng bên trái. Quy tắc(rule) được tạo trong quá trình triển khai AWS CloudFormation sẽ được tìm thấy trong **default** event bus và sẽ được đặt tên tương tự như những gì bạn thấy ở đây.
 
-![S3](/images/4.s3/001-s3.png)
+![Amazon EventBridge](/images/4.AmazonEventBridge/001-EventBridge-Dashboard.png)
 
-Trong phần này chúng ta sẽ tiến hành tạo S3 bucket và thực hiện cấu hình lưu trữ các session logs để xem được chi tiết các câu lệnh được sử dụng trong session.
+Chọn quy tắc(rule) để xem **Event pattern** được xác định cho quy tắc đó. Event pattern này được sử dụng để khớp với các sự kiện events đến được xuất bản từ AWS Backup. Trong mô hình này, bạn sẽ nhận thấy rằng tất cả các bản sao lưu Amazon EBS đã hoàn thành sẽ được khớp với nhau.
 
-![port-fwd](/images/arc-log.png) 
+![EventPattern](/images/4.AmazonEventBridge/002-EventBridge-Rule-Pattern.png)
 
-### Nội dung:
+   + Chọn **Targets** tab để AWS Lambda function được liên kết được kích hoạt khi quy tắc khớp với một sự kiện sắp tới.
 
-  - [Cập nhật IAM Role](./4.1-updateiamrole/)
-  - [Tạo **S3 Bucket**](./4.2-creates3bucket/)
-  - [Tạo S3 Gateway endpoint](./4.3-creategwes3)
-  - [Cấu hình **Session logs**](./4.4-configsessionlogs/)
+2. + Chọn **Target Name** liên kết để truy cập AWS Lambda function
+
+![EventRuleTarget](/images/4.AmazonEventBridge/003-EventBridge-Rule-Target.png)
+

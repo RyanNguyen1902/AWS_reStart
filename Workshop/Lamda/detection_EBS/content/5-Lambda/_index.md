@@ -6,11 +6,10 @@ chapter : false
 pre : " <b> 5. </b> "
 ---
 
-{{% notice info %}}
-Selecting the ****Target Name** link directs you to the AWS Lambda function.
-{{% /notice %}}
 
-![Lambda](/images/5.Lambda/001-Lambda)
+Selecting the **Target Name** link directs you to the AWS Lambda function.
+
+![Lambda](/images/5.Lambda/001-Lambda.png)
 
 While the name of your AWS Lambda function will be slightly different, you’ll see the same configuration identifying Amazon EventBridge as the trigger for invoking the function. Explore the code to see how snapshots are compared and how integrations work with both Amazon DynamoDB and Amazon CloudWatch.
 

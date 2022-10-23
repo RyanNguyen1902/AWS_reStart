@@ -11,7 +11,7 @@ pre = "<b>6. </b>"
 
 Time to see the solution in action.
 
-## AWS Backup
+#### AWS Backup
 
 1. To see the solution in action, you’ll need to create some backups for an Amazon EBS volume. If you don’t mind waiting, the AWS Backup plan will kick off the first daily backups tomorrow. But if you want to see the pipeline in action right now, you can navigate over to the AWS Backup dashboard, and within the **On-demand backup** section, 
    + Select the **Create on-demand backup** button.
@@ -26,7 +26,7 @@ Time to see the solution in action.
 
    After selecting these two items, click the **Create on-demand backup** button at the bottom of the screen to start the backup. The backup will start, and you’ll be notified of its status. Initially, t*he backup will be listed as **Created** and then will eventually move to **Completed**. You’ll need to refresh the backup jobs screen to get the updated status. Once in the Completed state, AWS Backup will publish an event to Amazon EventBridge, and the pipeline will be off and running!
 
-## Amazon CloudWatch
+#### Amazon CloudWatch
 
 3. Now that you’ve started your first backup, it’s time to take a look in **Amazon CloudWatch** to see what’s happening. Navigate to the Amazon CloudWatch dashboard and select the **All alarms** link in the left navigation pane. It might take some time for the AWS Backup event to travel completely through the pipeline, but soon you’ll see a new alarm with a name similar to what’s shown here.
 
@@ -40,77 +40,17 @@ The alarm was created by the AWS Lambda function we deployed, and it’s configu
 
 At this point, we don’t have any metric data, so the alarm displays **insufficient data**. In fact, for the Amazon CloudWatch anomaly detection model to be properly trained, we’ll need to go through quite a few backups iterations before a pattern can be established.
 
-Jumping ahead on those additional backups, here’s what you can expect to see once the model has been adequately trained.
+5. Jumping ahead on those additional backups, here’s what you can expect to see once the model has been adequately trained.
 
+![CloudWatch-Alarm-Populated](/images/6.WalkthroughResult/005-CloudWatch-Alarm-Populated.png)
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   + Click **Instances**.
-   + Select both **Public Linux Instance** and **Private Windows Instance** instances.
-   + Click **Instance state**.
-   + Click **Terminate instance**, then click **Terminate** to confirm.
+Checking now, a substantial number of backups have taken place, and you’ll notice a gray band stretching across the display. This is the anomaly-detection band, and when current and previous snapshots are compared and have too many changed blocks, the grey-band threshold is broken and the alarm is triggered.
 
-2. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home#/home)
-   + Click **Roles**.
-   + In the search box, enter **SSM**.
-   + Click to select **SSM-Role**.
-   + Click **Delete**, then enter the role name **SSM-Role** and click **Delete** to delete the role.
+6. Finally, let’s take a look at the actual Amazon CloudWatch custom metric. If you click on the **View in metrics** button in the upper-right section of the graph, you’ll be directed to the metrics page, where you can see all metric data points and also the metric and its anomaly-detection configuration.
 
-![Clean](/images/6.clean/001-clean.png)
+![CloudWatch-Alarm-Populated](/images/6.WalkthroughResult/006-CloudWatch-Metrics.png)
 
-3. Click **Users**.
-   + Click on user **Portfwd**.
-   + Click **Delete**, then enter the user name **Portfwd** and click **Delete** to delete the user.
+#### Conclusion
 
-#### Delete S3 bucket
+Detecting anomalies within your data is an important way to stay ahead of cyberattacks and ransomware. In this blog post, I walked through building a simple serverless anomaly-detection pipeline using native services in AWS to identify anomalies within Amazon EBS Volumes during backup. By using the powerful built-in machine learning capabilities of Amazon CloudWatch, anomalous activity is surfaced, and you’re alerted when snapshot backup sizes breach a threshold band. This allows you to keep an ever-watchful eye on your important data.
 
-1. Access [System Manager - Session Manager service management console](https://console.aws.amazon.com/systems-manager/session-manager).
-   + Click the **Preferences** tab.
-   + Click **Edit**.
-   + Scroll down.
-   + In the section **S3 logging**.
-   + Uncheck **Enable** to disable logging.
-   + Scroll down.
-   + Click **Save**.
-
-2. Go to [S3 service management console](https://s3.console.aws.amazon.com/s3/home)
-   + Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )
-   + Click **Empty**.
-   + Enter **permanently delete**, then click **Empty** to proceed to delete the object in the bucket.
-   + Click **Exit**.
-
-3. After deleting all objects in the bucket, click **Delete**
-
-![Clean](/images/6.clean/002-clean.png)
-
-4. Enter the name of the S3 bucket, then click **Delete bucket** to proceed with deleting the S3 bucket.
-
-![Clean](/images/6.clean/003-clean.png)
-
-#### Delete VPC Endpoints
-
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Endpoints**.
-   + Select the 4 endpoints we created for the lab including **SSM**, **SSMMESSAGES**, **EC2MESSAGES**, **S3GW**.
-   + Click **Actions**.
-   + Click **Delete VPC endpoints**.
-
-![Clean](/images/6.clean/004-clean.png)
-
-2. In the confirm box, enter **delete**.
-   + Click **Delete** to proceed with deleting endpoints.
-
-3. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.
-
-![Clean](/images/6.clean/005-clean.png)
-
-#### Delete VPC
-
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Your VPCs**.
-   + Click on **Lab VPC**.
-   + Click **Actions**.
-   + Click **Delete VPC**.
-
-2. In the confirm box, enter **delete** to confirm, click **Delete** to delete **Lab VPC** and related resources.
-
-![Clean](/images/6.clean/006-clean.png)
