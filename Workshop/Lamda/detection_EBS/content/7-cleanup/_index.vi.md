@@ -17,7 +17,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 5. Xác minh xóa stack
 6. Đợi vài phút stack chuyển trạng thái sang DELETE_COMPLETE là xóa thành công
 
-![AWS CloudFormation](/images/7.clean/001-clean.png)
+![AWS CloudFormation](/images/7.clean/001-clean.PNG)
 
 #### Xóa S3 bucket
 
@@ -29,11 +29,11 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 
 3. Sau khi xóa hết object trong bucket, click **Delete**
 
-![Clean](/images/7.clean/003-clean.png)
+![Clean](/images/7.clean/003-clean.PNG)
 
 4. Điền tên S3 bucket, sau đó click **Delete bucket** để tiến hành xóa S3 bucket.
 
-![Clean](/images/7.clean/004-clean.png)
+![Clean](/images/7.clean/004-clean.PNG)
 
 #### Xóa EC2 instance
 
@@ -45,5 +45,5 @@ Bước này ta xóa intance đã tạo để có EBS sao lưu
   + Click **Instance state**.
   + Click **Terminate instance**, sau đó click **Terminate** để xác nhận.
 
-![AWS EC2](/images/7.clean/002-cleann.png)
+![AWS EC2](/images/7.clean/002-clean.PNG)
   

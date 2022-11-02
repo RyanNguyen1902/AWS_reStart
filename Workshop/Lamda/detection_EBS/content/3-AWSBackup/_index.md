@@ -11,18 +11,18 @@ pre : " <b> 3. </b> "
 After you’ve logged into the AWS Management Console, navigate to the AWS Backup dashboard to look at the resources created during the AWS CloudFormation deployment. In the left navigation pane, click on the **Backup vaults** link. You should see something similar to what’s shown in this figure, with a newly created vault called
 
 **AnomalyDetectionAnomalyDetectionBackupPlanVault**
-![Backup-Vaults](/images/3.AWSBackup/001-Backup-Vaults.png) 
+![Backup-Vaults](/images/3.AWSBackup/001-Backup-Vaults.png?featherlight=false&width=90pc) 
 
 
 1. This backup vault is a container that stores and organizes backups associated with the Amazon EBS volumes that match the tag key you entered for the **AnomalyDetectionTagKey** AWS CloudFormation parameter.
 
 + Next, select the **Backup plans** link in the left navigation pane to access the backup plan created during the deployment.
 
-![Backup-Plan](/images/3.AWSBackup/002-Backup-Plan.png) 
+![Backup-Plan](/images/3.AWSBackup/002-Backup-Plan.PNG?featherlight=false&width=90pc) 
 
 2. Select the **AnomalyDetectionBackupPlan** link under “Backup plan name” to access detailed information.
 
-![Backup-Plan](/images/3.AWSBackup/003-Backup-Plan.png) 
+![Backup-Plan](/images/3.AWSBackup/003-Backup-Plan.PNG?featherlight=false&width=90pc) 
 
 The default CloudFormation creates daily and monthly backup rules with 1-year retention. If this default doesn’t match your requirements, feel free to delete/add new rules as you see fit.
 

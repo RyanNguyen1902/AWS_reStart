@@ -17,7 +17,7 @@ We will take the following steps to delete the resources we created in this exer
 5. Verify clearing stack
 6. Wait a few minutes for the stack to change state to **DELETE_COMPLETE** to be deleted successfully
 
-![AWS CloudFormation](/images/7.clean/001-clean.png)
+![AWS CloudFormation](/images/7.clean/001-clean.PNG)
 
 #### Delete S3 bucket
 
@@ -38,11 +38,11 @@ We will take the following steps to delete the resources we created in this exer
 
 3. After deleting all objects in the bucket, click **Delete**
 
-![Clean](/images/7.clean/003-clean.png)
+![Clean](/images/7.clean/003-clean.PNG)
 
 4. Enter the name of the S3 bucket, then click **Delete bucket** to proceed with deleting the S3 bucket.
 
-![Clean](/images/7.clean/004-clean.png)
+![Clean](/images/7.clean/004-clean.PNG)
 
 #### Delete EC2 instance
 
@@ -52,4 +52,4 @@ We will take the following steps to delete the resources we created in this exer
    + Click **Instance state**.
    + Click **Terminate instance**, then click **Terminate** to confirm.
 
-   ![AWS EC2](/images/7.clean/002-cleann.png)
+   ![AWS EC2](/images/7.clean/002-clean.PNG)

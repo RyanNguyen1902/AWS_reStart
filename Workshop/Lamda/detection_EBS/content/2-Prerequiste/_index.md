@@ -23,11 +23,11 @@ To learn about AMAZON S3 and AWS CLOUDFORMATION you can refer to the lab:
 
 3. After you’ve logged into the AWS Management Console, create an Amazon S3 bucket with a name you choose. You’ll need to create this S3 bucket in the same region you intend to deploy the CloudFormation template. After you create the bucket, upload the **“anomaly-detection-lambda.zip”** file to the newly created bucket. 
 
-![S3](/images/2.prerequisite/001-s3.png) 
+![S3](/images/2.prerequisite/001-s3.PNG?featherlight=false&width=90pc) 
 
 This screenshot shows an Amazon S3 bucket named **“ebs-anomaly-detection-bucket”** with the zipped Lambda code uploaded to it.
 
-![S3-Bucket](/images/2.prerequisite/002-S3-Bucket.png) 
+![S3-Bucket](/images/2.prerequisite/002-S3-Bucket.png?featherlight=false&width=90pc) 
 
 ### Content
   - [Create CloudFormation stack](2.1-CloudFormationstack/)

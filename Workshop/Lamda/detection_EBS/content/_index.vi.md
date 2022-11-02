@@ -12,7 +12,7 @@ Bảo vệ dữ liệu của bạn khỏi các cuộc tấn công mạng và ran
 
   Trong bài này, bạn sẽ học cách bảo vệ bộ nhớ của mình và thực hành xây dựng một đường dẫn đơn giản không có máy chủ(serverless) để phát hiện các điểm bất thường xảy ra trên các  Amazon Elastic Block Store (EBS) volumes. 
 
-![ConnectPrivate](/images/AWS-Backup-Anomaly-Detection.png) 
+![ConnectPrivate](/images/AWS-Backup-Anomaly-Detection.png?featherlight=false&width=90pc) 
 
 ### Nội dung
 

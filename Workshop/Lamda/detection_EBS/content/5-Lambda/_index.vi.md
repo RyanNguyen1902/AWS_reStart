@@ -9,7 +9,7 @@ pre : " <b> 5. </b> "
 
 Chọn **Target Name** liên kết sẽ đưa bạn đến AWS Lambda function.
 
-![Lambda](/images/5.Lambda/001-Lambda.png)
+![Lambda](/images/5.Lambda/001-Lambda.PNG?featherlight=false&width=90pc)
 
 Mặc dù tên của hàm AWS Lambda của bạn sẽ hơi khác một chút, nhưng bạn sẽ thấy cùng một cấu hình xác định Amazon EventBridge làm trình kích hoạt để gọi hàm. Chúng ta có thể xem code để xem ảnh chụp nhanh snapshots được so sánh như thế nào và cách tích hợp hoạt động với cả **Amazon DynamoDB và Amazon CloudWatch**.
 

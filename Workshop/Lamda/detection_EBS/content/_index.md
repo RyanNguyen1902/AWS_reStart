@@ -11,7 +11,7 @@ chapter : false
 
  In this lab, you'll learn protect your storage and practice to build a simple serverless pipeline to detect anomalies occurring on Amazon Elastic Block Store (EBS) volumes. I use AWS Backup along with several other AWS managed services to build the solution.. 
 
-![ConnectPrivate](/images/AWS-Backup-Anomaly-Detection.png) 
+![ConnectPrivate](/images/AWS-Backup-Anomaly-Detection.png?featherlight=false&width=90pc) 
 
 ### Content
  1. [Introduction ](1-introduce/)

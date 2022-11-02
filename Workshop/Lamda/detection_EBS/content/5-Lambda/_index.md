@@ -9,7 +9,7 @@ pre : " <b> 5. </b> "
 
 Selecting the **Target Name** link directs you to the AWS Lambda function.
 
-![Lambda](/images/5.Lambda/001-Lambda.png)
+![Lambda](/images/5.Lambda/001-Lambda.PNG?featherlight=false&width=90pc)
 
 While the name of your AWS Lambda function will be slightly different, you’ll see the same configuration identifying Amazon EventBridge as the trigger for invoking the function. Explore the code to see how snapshots are compared and how integrations work with both Amazon DynamoDB and Amazon CloudWatch.
 
